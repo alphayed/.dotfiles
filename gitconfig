@@ -1,0 +1,22 @@
+[user]
+	name = Ahmed Fayed
+	email = ahmedm.fayed@gmail.com
+[core]
+	editor = vim
+	excludesfile = /home/alphayed/.dotfiles/gitignore
+[alias]
+  s = status
+  d = diff
+  dc = diff --cached
+  cko = checkout
+  ckb = checkout -b
+  l = log --graph --abbrev-commit --date=relative
+  la = log --graph --abbrev-commit --date=relative --all
+  lp = log -p
+  c = commit -m
+[color]
+  status = auto
+  diff = auto
+  branch = auto
+  remote = auto
+  ui = 1

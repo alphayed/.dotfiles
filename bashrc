@@ -16,9 +16,11 @@ alias rake='bundle exec rake'
 alias rails='bundle exec rails'
 alias c='clear'
 alias bashrc='vim ~/.dotfiles/bashrc'
-alias vimrc='vim ~/.dontfiles/vimrc'
+alias vimrc='vim ~/.dotfiles/vimrc'
 alias lsa='ls -a'
 alias untar='tar -zxvf' 
+alias gitconfig='vim ~/.dotfiles/gitconfig'
+alias gitignore='vim ~/.dotfiles/gitignore'
 #----------------------------------#
 
 alias ls='ls --color=auto'

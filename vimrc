@@ -47,13 +47,12 @@
 
  " }
 
- """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
  "General settings {
- set number
- set ts=2 sts=2 sw=2 expandtab
- set list          " Display unprintable characters f12 - switches
- set listchars=tab:▸\ ,eol:¬,nbsp:⋅,trail:•,extends:»,precedes:« " Unprintable chars mapping
- 
+    set number
+    set ts=2 sts=2 sw=2 expandtab
+    set list          " Display unprintable characters f12 - switches
+    set listchars=tab:▸\ ,eol:¬,nbsp:⋅,trail:•,extends:»,precedes:« " Unprintable chars mapping
+
  " }
 
   "Statusline {
@@ -66,5 +65,4 @@
 
      set laststatus=2
 
-     " }
-     This is a test
+  " }
