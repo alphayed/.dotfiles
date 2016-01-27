@@ -1,6 +1,7 @@
  set nocompatible
  filetype on
  filetype indent on
+ syntax on
 
  "NeoBundle pac manager {
 
@@ -27,15 +28,20 @@
    " Refer to |:NeoBundle-examples|.
    " Note: You don't set neobundle setting in .gvimrc!
    NeoBundle 'tpope/vim-rails'
-   NeoBundle 'vim-scripts/ScrollColors'
+   NeoBundle 'tpope/vim-surround'
+   NeoBundle 'tpope/vim-fugitive'
    NeoBundle 'tomtom/tcomment_vim'
-   NeoBundle 'vimplugin/project.vim'
    NeoBundle 'scrooloose/nerdtree'
    NeoBundle 'Xuyuanp/nerdtree-git-plugin'
-   NeoBundle 'tpope/vim-surround'
    NeoBundle 'airblade/vim-gitgutter'
    NeoBundle 'vim-airline/vim-airline'
-   NeoBundle 'fugitive.vim'
+   NeoBundle 'edkolev/tmuxline.vim'
+   NeoBundle 'jiangmiao/auto-pairs'
+   NeoBundle 'rstacruz/sparkup'
+   NeoBundle 'garbas/vim-snipmate'
+   NeoBundle 'honza/vim-snippets'
+   NeoBundle 'vim-addon-mw-utils' "Dependency for snipmate
+   NeoBundle 'tomtom/tlib_vim'  "Dependency for snipmate
    call neobundle#end()
 
    " Required:
@@ -49,20 +55,40 @@
 
  "General settings {
     set number
+    set fileencoding=utf-8
+    set encoding=utf-8
+    set backspace=indent,eol,start
     set ts=2 sts=2 sw=2 expandtab
     set list          " Display unprintable characters f12 - switches
     set listchars=tab:▸\ ,eol:¬,nbsp:⋅,trail:•,extends:»,precedes:« " Unprintable chars mapping
+    set breakindent
+    set autoindent
+    set winheight=999
+    set winwidth=90
+    set cursorline
 
+    let g:html_indent_inctags = "html,body,head,tbody"      "sets the indentation
  " }
 
   "Statusline {
-
-     " let g:airline_section_a = airline#section#create(['mode',' ','branch'])
      let g:airline#extensions#tabline#enabled = 1
      let g:airline#extensions#tabline#left_sep = ' '
      let g:airline#extensions#tabline#left_alt_sep = '|'
      let g:airline_powerline_fonts = 1
 
      set laststatus=2
-
   " }
+
+  :hi CursorLine   cterm=NONE ctermbg=35 ctermfg=black "color settings
+
+  "Key mappings {
+    let mapleader =","
+    nnoremap vimrc :sp ~/.dotfiles/vimrc<CR>
+    nnoremap nt :tabnew<CR>
+    noremap <F10> :NERDTreeToggle<CR>
+    noremap <F9> :TComment<CR>
+    noremap <SPACE>k <C-w>k
+    noremap <SPACE>j <C-w>j
+    noremap <SPACE>h <C-w>h
+    noremap <SPACE>l <C-w>l
+  "}
