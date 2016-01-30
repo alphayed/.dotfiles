@@ -72,8 +72,8 @@
 
   "Statusline {
      let g:airline#extensions#tabline#enabled = 1
-     let g:airline#extensions#tabline#left_sep = ' '
-     let g:airline#extensions#tabline#left_alt_sep = '|'
+     let g:airline#extensions#tabline#left_sep = ''
+     let g:airline#extensions#tabline#left_alt_sep = ''
      let g:airline_powerline_fonts = 1
 
      set laststatus=2
@@ -84,6 +84,7 @@
   "Key mappings {
     let mapleader =","
     nnoremap vimrc :sp ~/.dotfiles/vimrc<CR>
+    nnoremap zshrc :sp ~/.dotfiles/zshrc<CR>
     nnoremap nt :tabnew<CR>
     noremap <F10> :NERDTreeToggle<CR>
     noremap <F9> :TComment<CR>
