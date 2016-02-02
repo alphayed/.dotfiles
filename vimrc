@@ -66,6 +66,9 @@
     set winheight=999
     set winwidth=90
     set cursorline
+    set backupdir=~/.vim/.backup
+    set undodir=~/.vim/.backup
+    set dir=~/.vim/.backup
 
     let g:html_indent_inctags = "html,body,head,tbody"      "sets the indentation
  " }
@@ -93,3 +96,21 @@
     noremap <SPACE>h <C-w>h
     noremap <SPACE>l <C-w>l
   "}
+
+  "Use TAB to complete when typing words, else inserts TABs as usual.
+  "Uses dictionary and source files to find matching words to complete.
+
+  "See help completion for source,
+  "Note: usual completion is on <C-n> but more trouble to press all the time.
+  "Never type the same word twice and maybe learn a new spellings!
+  "Use the Linux dictionary when spelling is in doubt.
+  "Window users can copy the file to their machine.
+  function! Tab_Or_Complete()
+    if col('.')>1 && strpart( getline('.'), col('.')-2, 3  ) =~ '^\w'
+      return "\<C-N>"
+    else
+      return "\<Tab>"
+    endif
+  endfunction
+  :inoremap <Tab> <C-R>=Tab_Or_Complete()<CR>
+  :set dictionary="/usr/dict/words"

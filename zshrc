@@ -49,7 +49,7 @@ ZSH_THEME="lambda-mod"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+# plugins=(git)
 
 # User configuration
   export PATH="/home/alphayed/.gem/ruby/2.3.0/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl"
@@ -114,6 +114,6 @@ export ARCHFLAGS="-arch x86_64"
    fi
 
    #Load Tmux on startup
-   if command -v tmux>/dev/null; then
-    [[ ! $TERM =~ screen  ]] && [ -z $TMUX  ] && exec tmux
-    fi
+   # if command -v tmux>/dev/null; then
+   #  [[ ! $TERM =~ screen  ]] && [ -z $TMUX  ] && exec tmux
+   #  fi
