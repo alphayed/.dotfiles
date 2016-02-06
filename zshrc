@@ -98,6 +98,7 @@ export ARCHFLAGS="-arch x86_64"
   alias untar='tar -zxvf'
   alias gitconfig='vim ~/.dotfiles/gitconfig'
   alias gitignore='vim ~/.dotfiles/gitignore'
+  alias gunssh='sudo systemctl start sshd.service'
 #)}
 
    # This is required for Rubygems to work without typing out the full location
