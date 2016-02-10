@@ -78,27 +78,30 @@ export ARCHFLAGS="-arch x86_64"
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 #
-#myCustom Commands {(
+# myCustom Commands {(
   alias zshrc='vim ~/.dotfiles/zshrc'
   alias bashrc='vim ~/.dotfiles/bashrc'
   alias vimrc='vim ~/.dotfiles/vimrc'
   alias nano='sudo nano'
+  # Pacman
   alias pacin='sudo pacman -S'
   alias pacup='sudo pacman -Syyu'
   alias pacsync='sudo pacman -Syy'
-  alias pacs='pacman -s'
-  alias yinstall='yaourt -S'
-  alias yupdate='yaourt -Syyu'
-  alias ysync='yaourt -Syy'
+  alias pacs='pacman -Ss'
+  # Yaourt
+  # alias yinstall='yaourt -S'
+  # alias yupdate='yaourt -Syyu'
+  # alias ysync='yaourt -Syy'
+  # Rails
   alias rake='bundle exec rake'
   alias rails='bundle exec rails'
+  # Shell Commands
   alias c='clear'
   alias lsa='ls -a --color=auto'
   alias ls='ls --color=auto'
   alias untar='tar -zxvf'
-  alias gitconfig='vim ~/.dotfiles/gitconfig'
-  alias gitignore='vim ~/.dotfiles/gitignore'
   alias gunssh='sudo systemctl start sshd.service'
+  alias startx='ssh-agent startx'
 #)}
 
    # This is required for Rubygems to work without typing out the full location
