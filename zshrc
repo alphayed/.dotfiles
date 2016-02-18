@@ -102,6 +102,8 @@ export ARCHFLAGS="-arch x86_64"
   alias untar='tar -zxvf'
   alias gunssh='sudo systemctl start sshd.service'
   alias startx='ssh-agent startx'
+  alias swp-f='find . -type f -name "*swp"'
+  alias swp-d='find . -type f -name "*swp" -exec rm -f "{}" \;'
 #)}
 
    # This is required for Rubygems to work without typing out the full location
