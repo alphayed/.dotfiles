@@ -3,7 +3,7 @@
 	email = ahmedm.fayed@gmail.com
 [core]
 	editor = vim
-	excludesfile = /home/alphayed/.gitignore
+	excludesfile = /home/alphayed/.gitignore_global
 [alias]
   s = status
   d = diff

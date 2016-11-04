@@ -43,6 +43,8 @@
    NeoBundle 'vim-addon-mw-utils' "Dependency for snipmate
    NeoBundle 'tomtom/tlib_vim'  "Dependency for snipmate
    NeoBundle 'Valloric/MatchTagAlways'
+   NeoBundle 'easymotion/vim-easymotion'
+   NeoBundle 'Valloric/YouCompleteMe'
    call neobundle#end()
 
    " Required:
@@ -96,5 +98,27 @@
     noremap <SPACE>j <C-w>j
     noremap <SPACE>h <C-w>h
     noremap <SPACE>l <C-w>l
-    nnoremap <leader>% :MtaJumpToOtherTag<cr>
+    nnoremap <leader>% :MtaJumpToOtherTag<CR>
+
+    "EasyMotion mapping {
+      let g:EasyMotion_do_mapping = 0 " Disable default mappings
+
+      " Jump to anywhere you want with minimal keystrokes, with just one
+      " key binding.
+      " `s{char}{label}`
+      nmap s <Plug>(easymotion-overwin-f)
+      " or
+      " `s{char}{char}{label}`
+      " Need one more keystroke, but on average, it may be more
+      " comfortable.
+      nmap s <Plug>(easymotion-overwin-f2)
+
+      " Turn on case insensitive feature
+      let g:EasyMotion_smartcase = 1
+
+      " JK motions: Line motions
+      map <Leader>j <Plug>(easymotion-j)
+      map <Leader>k <Plug>(easymotion-k)
+    "}
+
   "}

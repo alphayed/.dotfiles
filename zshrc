@@ -93,8 +93,8 @@ export ARCHFLAGS="-arch x86_64"
   # alias yupdate='yaourt -Syyu'
   # alias ysync='yaourt -Syy'
   # Rails
-  alias rake='bundle exec rake'
-  alias rails='bundle exec rails'
+  # alias rake='bundle exec rake'
+  # alias rails='bundle exec rails'
   # Shell Commands
   alias c='clear'
   alias lsa='ls -a --color=auto'
@@ -123,3 +123,13 @@ export ARCHFLAGS="-arch x86_64"
    # if command -v tmux>/dev/null; then
    #  [[ ! $TERM =~ screen  ]] && [ -z $TMUX  ] && exec tmux
    #  fi
+
+   # RVM (Ruby Version Manager)
+   export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+   [[ -s "$HOME/.rvm/scripts/rvm"  ]] && source "$HOME/.rvm/scripts/rvm"
+   # RVM bash completion
+   [[ -r "$HOME/.rvm/scripts/completion"  ]] && source "$HOME/.rvm/scripts/completion"
+   # RVM Commands
+   alias gemset-l='rvm gemset list'
+   alias gemset-u='rvm gemset use'
+   alias gemset-c='rvm gemset create'
