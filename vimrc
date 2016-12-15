@@ -37,7 +37,7 @@
    NeoBundle 'vim-airline/vim-airline'
    NeoBundle 'edkolev/tmuxline.vim'
    NeoBundle 'jiangmiao/auto-pairs'
-   NeoBundle 'rstacruz/sparkup'
+   NeoBundle 'rstacruz/sparkup' "Sparkup lets you write HTML code faster.
    NeoBundle 'garbas/vim-snipmate'
    NeoBundle 'honza/vim-snippets'
    NeoBundle 'vim-addon-mw-utils' "Dependency for snipmate
@@ -45,6 +45,7 @@
    NeoBundle 'Valloric/MatchTagAlways'
    NeoBundle 'easymotion/vim-easymotion'
    NeoBundle 'Valloric/YouCompleteMe'
+   NeoBundle 'vim-syntastic/syntastic'
    call neobundle#end()
 
    " Required:
@@ -76,6 +77,10 @@
     let g:html_indent_inctags = "html,body,head,tbody"      "sets the indentation
  " }
 
+  "YouCompleteMe {
+    let g:ycm_global_ycm_extra_conf = '/home/alphayed/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+  "}
+
   "Statusline {
      let g:airline#extensions#tabline#enabled = 1
      let g:airline#extensions#tabline#left_sep = ''
@@ -84,6 +89,17 @@
 
      set laststatus=2
   " }
+
+  "syntastic {
+    set statusline+=%#warningmsg#
+    set statusline+=%{SyntasticStatuslineFlag()}
+    set statusline+=%*
+
+    let g:syntastic_always_populate_loc_list = 1
+    let g:syntastic_auto_loc_list = 1
+    let g:syntastic_check_on_open = 1
+    let g:syntastic_check_on_wq = 0
+  "}
 
   :hi CursorLine   cterm=NONE ctermbg=35 ctermfg=black "color settings
 
