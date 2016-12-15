@@ -82,26 +82,21 @@ export ARCHFLAGS="-arch x86_64"
   alias zshrc='vim ~/.dotfiles/zshrc'
   alias bashrc='vim ~/.dotfiles/bashrc'
   alias vimrc='vim ~/.dotfiles/vimrc'
-  alias nano='sudo nano'
+  alias lock='slimlock'
+  alias untar='tar -zxvf'
+  alias gunssh='sudo systemctl start sshd.service'
+  alias startx='ssh-agent startx'
   # Pacman
   alias pacin='sudo pacman -S'
   alias pacup='sudo pacman -Syyu'
   alias pacsync='sudo pacman -Syy'
-  alias pacs='pacman -Ss'
-  # Yaourt
-  # alias yinstall='yaourt -S'
-  # alias yupdate='yaourt -Syyu'
-  # alias ysync='yaourt -Syy'
-  # Rails
-  # alias rake='bundle exec rake'
-  # alias rails='bundle exec rails'
+  alias unpac='pacman -Rs'
+  alias checkpac='pacman -Qs'
   # Shell Commands
   alias c='clear'
   alias lsa='ls -a --color=auto'
   alias ls='ls --color=auto'
-  alias untar='tar -zxvf'
-  alias gunssh='sudo systemctl start sshd.service'
-  alias startx='ssh-agent startx'
+  alias zsh_reload='source ~/.zshrc'
   alias swp-f='find . -type f -name "*swp"'
   alias swp-d='find . -type f -name "*swp" -exec rm -f "{}" \;'
 #)}
