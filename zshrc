@@ -133,3 +133,6 @@ export ARCHFLAGS="-arch x86_64"
    alias gemset-l='rvm gemset list'
    alias gemset-u='rvm gemset use'
    alias gemset-c='rvm gemset create'
+
+   #Fix CURL certificates path
+   export CURL_CA_BUNDLE=/etc/ssl/certs/ca-certificates.crt
