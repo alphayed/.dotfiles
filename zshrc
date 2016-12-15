@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/alphayed/.oh-my-zsh
+export ZSH=/home/alphayed/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -52,7 +52,7 @@ ZSH_THEME="lambda-mod"
 # plugins=(git)
 
 # User configuration
-  export PATH="/home/alphayed/.gem/ruby/2.3.0/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl"
+export PATH="/home/alphayed/.gem/ruby/2.3.0/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -77,7 +77,7 @@ export ARCHFLAGS="-arch x86_64"
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-#
+
 # myCustom Commands {(
   alias zshrc='vim ~/.dotfiles/zshrc'
   alias bashrc='vim ~/.dotfiles/bashrc'
@@ -101,33 +101,30 @@ export ARCHFLAGS="-arch x86_64"
   alias swp-d='find . -type f -name "*swp" -exec rm -f "{}" \;'
 #)}
 
-   # This is required for Rubygems to work without typing out the full location
-   PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
+# This is required for Rubygems to work without typing out the full location
+PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
 
-   #Bundler installs gems system-wide, which is contrary to the behaviour of gem itself on Arch. To correct this, add the following line
-   export GEM_HOME=$(ruby -e 'print Gem.user_dir')
+#Bundler installs gems system-wide, which is contrary to the behaviour of gem itself on Arch. To correct this, add the following line
+export GEM_HOME=$(ruby -e 'print Gem.user_dir')
 
-   #Enables 256color
-   if [ -e /usr/share/terminfo/x/xterm-256color ]; then
-           export TERM='xterm-256color'
-   else
-           export TERM='xterm-color'
-   fi
+#Enables 256color
+if [ -e /usr/share/terminfo/x/xterm-256color ]; then
+       export TERM='xterm-256color'
+else
+       export TERM='xterm-color'
+fi
 
-   #Load Tmux on startup
-   # if command -v tmux>/dev/null; then
-   #  [[ ! $TERM =~ screen  ]] && [ -z $TMUX  ] && exec tmux
-   #  fi
+#Load Tmux on startup
+# if command -v tmux>/dev/null; then
+#  [[ ! $TERM =~ screen  ]] && [ -z $TMUX  ] && exec tmux
+#  fi
 
-   # RVM (Ruby Version Manager)
-   export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-   [[ -s "$HOME/.rvm/scripts/rvm"  ]] && source "$HOME/.rvm/scripts/rvm"
-   # RVM bash completion
-   [[ -r "$HOME/.rvm/scripts/completion"  ]] && source "$HOME/.rvm/scripts/completion"
-   # RVM Commands
-   alias gemset-l='rvm gemset list'
-   alias gemset-u='rvm gemset use'
-   alias gemset-c='rvm gemset create'
-
-   #Fix CURL certificates path
-   export CURL_CA_BUNDLE=/etc/ssl/certs/ca-certificates.crt
+# RVM (Ruby Version Manager)
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+[[ -s "$HOME/.rvm/scripts/rvm"  ]] && source "$HOME/.rvm/scripts/rvm"
+# RVM bash completion
+[[ -r "$HOME/.rvm/scripts/completion"  ]] && source "$HOME/.rvm/scripts/completion"
+# RVM Commands
+alias gemset-l='rvm gemset list'
+alias gemset-u='rvm gemset use'
+alias gemset-c='rvm gemset create'
