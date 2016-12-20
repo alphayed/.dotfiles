@@ -90,8 +90,9 @@ export ARCHFLAGS="-arch x86_64"
   alias pacin='sudo pacman -S'
   alias pacup='sudo pacman -Syyu'
   alias pacsync='sudo pacman -Syy'
-  alias unpac='pacman -Rs'
-  alias checkpac='pacman -Qs'
+  alias unpac='sudo pacman -Rs'
+  alias checkpac='pacman -Qe'
+  alias checkpac -m='pacman -Qm'
   # Shell Commands
   alias c='clear'
   alias lsa='ls -a --color=auto'
