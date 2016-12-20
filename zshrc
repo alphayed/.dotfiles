@@ -91,8 +91,17 @@ export ARCHFLAGS="-arch x86_64"
   alias pacup='sudo pacman -Syyu'
   alias pacsync='sudo pacman -Syy'
   alias unpac='sudo pacman -Rs'
-  alias checkpac='pacman -Qe'
-  alias checkpac -m='pacman -Qm'
+  alias ckpac='pacman -Qe'
+
+  #A function that gives lists manually installed packages using pacman -Qm.
+  ckpac() {
+    if [[ $@ == " -m" ]]; then
+      command pacman -Qm
+    else
+      command pacman "$@"
+    fi
+  }
+
   # Shell Commands
   alias c='clear'
   alias lsa='ls -a --color=auto'
