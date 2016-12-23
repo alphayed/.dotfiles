@@ -1,32 +1,42 @@
 " 1 important----------------------------------------------------------------------------------------------------------
  set nocompatible
+
 " 2 moving around, searching and patterns------------------------------------------------------------------------------
  set is                                  " show match for partly typed search command
  set ic                                  " ignore case when using a search pattern
+
 " 4 displaying text----------------------------------------------------------------------------------------------------
  set breakindent
  set list                                                        " display unprintable characters f12 - switches
  set listchars=tab:▸\ ,eol:¬,nbsp:⋅,trail:•,extends:»,precedes:« " unprintable chars mapping
+
 " 5 syntax, highlighting and spelling
  set hlsearch
+
 " 6 multiple windows---------------------------------------------------------------------------------------------------
  set winheight=999
  set winwidth=90
+
 " 13 editing text------------------------------------------------------------------------------------------------------
  set undodir=~/.vim/.backup
  set backspace=indent,eol,start
+
 " 14 tabs and indenting------------------------------------------------------------------------------------------------
  set ts=2 sts=2 sw=2 expandtab
  set autoindent
  set smartindent
+
 " 19 the swap file-----------------------------------------------------------------------------------------------------
  set backupdir=~/.vim/.backup
  set dir=~/.vim/.backup
+
 " 21 executing external commands
  set shell=/usr/bin/zsh
+
 " 24 multi-byte characters---------------------------------------------------------------------------------------------
  set encoding=utf-8
  set fileencoding=utf-8
+
 " general settings-----------------------------------------------------------------------------------------------------
  set number
  let g:html_indent_inctags = "html,body,head,tbody"      "sets the indentation
