@@ -78,7 +78,7 @@ export ARCHFLAGS="-arch x86_64"
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 
-# myCustom Commands {(
+# Custom Commands--------------------------------------------------------------------------------------------------------
   alias zshrc='vim ~/.dotfiles/zshrc'
   alias bashrc='vim ~/.dotfiles/bashrc'
   alias vimrc='vim ~/.dotfiles/vimrc'
@@ -91,8 +91,9 @@ export ARCHFLAGS="-arch x86_64"
   alias pacup='sudo pacman -Syyu'
   alias pacsync='sudo pacman -Syy'
   alias unpac='sudo pacman -Rs'
+  alias clncac='sudo pacman -Sc'  #Cleanes pacman cache
+  alias clnpac='sudo pacman -Rns $(pacman -Qtdq)'  #Removes orphan packages
   alias ckpac='pacman -Qe'
-
   #A function that gives lists manually installed packages using pacman -Qm.
   ckpac() {
     if [[ $@ == " -m" ]]; then
@@ -101,7 +102,6 @@ export ARCHFLAGS="-arch x86_64"
       command pacman "$@"
     fi
   }
-
   # Shell Commands
   alias c='clear'
   alias lsa='ls -a --color=auto'
@@ -109,25 +109,13 @@ export ARCHFLAGS="-arch x86_64"
   alias zsh_reload='source ~/.zshrc'
   alias swp-f='find . -type f -name "*swp"'
   alias swp-d='find . -type f -name "*swp" -exec rm -f "{}" \;'
-#)}
 
+# Ruby-------------------------------------------------------------------------------------------------------------------
 # This is required for Rubygems to work without typing out the full location
 PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
 
 #Bundler installs gems system-wide, which is contrary to the behaviour of gem itself on Arch. To correct this, add the following line
 export GEM_HOME=$(ruby -e 'print Gem.user_dir')
-
-#Enables 256color
-if [ -e /usr/share/terminfo/x/xterm-256color ]; then
-       export TERM='xterm-256color'
-else
-       export TERM='xterm-color'
-fi
-
-#Load Tmux on startup
-# if command -v tmux>/dev/null; then
-#  [[ ! $TERM =~ screen  ]] && [ -z $TMUX  ] && exec tmux
-#  fi
 
 # RVM (Ruby Version Manager)
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
@@ -138,3 +126,11 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 alias gemset-l='rvm gemset list'
 alias gemset-u='rvm gemset use'
 alias gemset-c='rvm gemset create'
+
+#Settings----------------------------------------------------------------------------------------------------------------
+#Enables 256color
+if [ -e /usr/share/terminfo/x/xterm-256color ]; then
+       export TERM='xterm-256color'
+else
+       export TERM='xterm-color'
+fi
